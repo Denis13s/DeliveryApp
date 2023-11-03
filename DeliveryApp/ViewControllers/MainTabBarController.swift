@@ -10,9 +10,10 @@ import UIKit
 final class MainTabBarController: UITabBarController {
     
     let dataService = DataService.shared
+    let cart = CartManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
 }

@@ -13,12 +13,12 @@ final class DataService {
     
     let categories: [Category]
     let restaurants: [Restaurant]
-    let menuItems: [MenuItem]
+//    let menuItems: [MenuItem]
     
     private init() {
         categories = Category.getData()
         restaurants = Restaurant.getData()
-        menuItems = MenuItem.getData()
+//        menuItems = MenuItem.getData()
     }
     
 }
