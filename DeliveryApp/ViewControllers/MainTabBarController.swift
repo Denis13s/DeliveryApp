@@ -10,10 +10,25 @@ import UIKit
 final class MainTabBarController: UITabBarController {
     
     let dataService = DataService.shared
-    let cart = CartManager.shared
+//    let cart = CartManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        shareData()
     }
+    
+    private func shareData() {
+        viewControllers?.forEach{ vc in
+            if let navigationVC = vc as? UINavigationController {
+                if let categoriesVC = navigationVC.viewControllers.first as? CategoriesListViewController {
+                    categoriesVC.categories = dataService.categories
+                } else if let restaurantsVC = navigationVC.viewControllers.first as? RestaurantsListViewController {
+                    restaurantsVC.restaurants = dataService.restaurants
+                }
+            }
+        }
+        
+    }
+    
 
 }

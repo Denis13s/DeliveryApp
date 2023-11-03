@@ -9,7 +9,7 @@ import UIKit
 
 class RestaurantsListViewController: UITableViewController {
     
-    let dataService = DataService.shared
+    var restaurants: [Restaurant]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,8 +17,7 @@ class RestaurantsListViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let restaurantMenuVC = segue.destination as? RestaurantMenuViewController {
-            if let index = sender as? Int {
-                let restaurant = dataService.restaurants[index]
+            if let restaurant = sender as? Restaurant {
                 restaurantMenuVC.restaurant = restaurant
             }
         }
@@ -26,7 +25,7 @@ class RestaurantsListViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showRestaurantMenu", sender: indexPath.row)
+        performSegue(withIdentifier: "showRestaurantMenu", sender: restaurants[indexPath.row])
     }
     
     // MARK: - Table view data source
@@ -38,7 +37,7 @@ class RestaurantsListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return dataService.restaurants.count
+        return restaurants.count
     }
     
     
@@ -46,7 +45,7 @@ class RestaurantsListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellRestaurant", for: indexPath)
         
         var content = cell.defaultContentConfiguration()
-        content.text = dataService.restaurants[indexPath.row].title
+        content.text = restaurants[indexPath.row].title
         cell.contentConfiguration = content
         
         return cell

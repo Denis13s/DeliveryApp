@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0454FDA22AF59FD300E51133 /* CategoriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0454FDA12AF59FD300E51133 /* CategoriesListViewController.swift */; };
+		0454FDA62AF5A99C00E51133 /* CategoryRestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0454FDA52AF5A99C00E51133 /* CategoryRestaurantsViewController.swift */; };
 		0470F15F2AF2CA5700354943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470F15E2AF2CA5700354943 /* AppDelegate.swift */; };
 		0470F1612AF2CA5700354943 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470F1602AF2CA5700354943 /* SceneDelegate.swift */; };
 		0470F1662AF2CA5700354943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0470F1642AF2CA5700354943 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0454FDA12AF59FD300E51133 /* CategoriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListViewController.swift; sourceTree = "<group>"; };
+		0454FDA52AF5A99C00E51133 /* CategoryRestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRestaurantsViewController.swift; sourceTree = "<group>"; };
 		0470F15B2AF2CA5700354943 /* DeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0470F15E2AF2CA5700354943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0470F1602AF2CA5700354943 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 				0470F1722AF2CA8A00354943 /* MainTabBarController.swift */,
 				047F98342AF587D400D2444B /* RestaurantsListViewController.swift */,
 				047F98382AF58BCA00D2444B /* RestaurantMenuViewController.swift */,
+				0454FDA12AF59FD300E51133 /* CategoriesListViewController.swift */,
+				0454FDA52AF5A99C00E51133 /* CategoryRestaurantsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -218,9 +224,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				047F98352AF587D400D2444B /* RestaurantsListViewController.swift in Sources */,
+				0454FDA62AF5A99C00E51133 /* CategoryRestaurantsViewController.swift in Sources */,
 				0470F15F2AF2CA5700354943 /* AppDelegate.swift in Sources */,
 				047F98392AF58BCA00D2444B /* RestaurantMenuViewController.swift in Sources */,
 				047F98332AF5844400D2444B /* CartManager.swift in Sources */,
+				0454FDA22AF59FD300E51133 /* CategoriesListViewController.swift in Sources */,
 				0470F1732AF2CA8A00354943 /* MainTabBarController.swift in Sources */,
 				0470F1612AF2CA5700354943 /* SceneDelegate.swift in Sources */,
 				0470F17C2AF2CB8E00354943 /* DataService.swift in Sources */,
