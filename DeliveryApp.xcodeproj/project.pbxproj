@@ -15,6 +15,11 @@
 		0470F1732AF2CA8A00354943 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470F1722AF2CA8A00354943 /* MainTabBarController.swift */; };
 		0470F17C2AF2CB8E00354943 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470F17B2AF2CB8E00354943 /* DataService.swift */; };
 		0470F17E2AF2CBA500354943 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470F17D2AF2CBA500354943 /* Models.swift */; };
+		B0EB79712AF41E1500D8625A /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0EB79702AF41E1500D8625A /* Cart.storyboard */; };
+		B0EB79792AF437A700D8625A /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB79782AF437A700D8625A /* CartViewController.swift */; };
+		B0EB797B2AF437E200D8625A /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB797A2AF437E200D8625A /* OrderViewController.swift */; };
+		B0EB797D2AF52D8F00D8625A /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB797C2AF52D8F00D8625A /* CartTableViewCell.swift */; };
+		B0EB797F2AF56C4E00D8625A /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB797E2AF56C4E00D8625A /* OrderTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		0470F1722AF2CA8A00354943 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		0470F17B2AF2CB8E00354943 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		0470F17D2AF2CBA500354943 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		B0EB79702AF41E1500D8625A /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
+		B0EB79782AF437A700D8625A /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CartViewController.swift; path = DeliveryApp/ViewControllers/CartViewController.swift; sourceTree = SOURCE_ROOT; };
+		B0EB797A2AF437E200D8625A /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		B0EB797C2AF52D8F00D8625A /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		B0EB797E2AF56C4E00D8625A /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,10 @@
 			isa = PBXGroup;
 			children = (
 				0470F1722AF2CA8A00354943 /* MainTabBarController.swift */,
+				B0EB79782AF437A700D8625A /* CartViewController.swift */,
+				B0EB797C2AF52D8F00D8625A /* CartTableViewCell.swift */,
+				B0EB797A2AF437E200D8625A /* OrderViewController.swift */,
+				B0EB797E2AF56C4E00D8625A /* OrderTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -114,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				0470F1642AF2CA5700354943 /* Main.storyboard */,
+				B0EB79702AF41E1500D8625A /* Cart.storyboard */,
 				0470F1692AF2CA5800354943 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -187,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0EB79712AF41E1500D8625A /* Cart.storyboard in Resources */,
 				0470F16B2AF2CA5800354943 /* LaunchScreen.storyboard in Resources */,
 				0470F1682AF2CA5800354943 /* Assets.xcassets in Resources */,
 				0470F1662AF2CA5700354943 /* Main.storyboard in Resources */,
@@ -203,8 +219,12 @@
 				0470F15F2AF2CA5700354943 /* AppDelegate.swift in Sources */,
 				0470F1732AF2CA8A00354943 /* MainTabBarController.swift in Sources */,
 				0470F1612AF2CA5700354943 /* SceneDelegate.swift in Sources */,
+				B0EB797B2AF437E200D8625A /* OrderViewController.swift in Sources */,
 				0470F17C2AF2CB8E00354943 /* DataService.swift in Sources */,
+				B0EB79792AF437A700D8625A /* CartViewController.swift in Sources */,
+				B0EB797F2AF56C4E00D8625A /* OrderTableViewCell.swift in Sources */,
 				0470F17E2AF2CBA500354943 /* Models.swift in Sources */,
+				B0EB797D2AF52D8F00D8625A /* CartTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +376,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VDM65QNNS4;
+				DEVELOPMENT_TEAM = 9LRJ33A34U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DeliveryApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -388,7 +408,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VDM65QNNS4;
+				DEVELOPMENT_TEAM = 9LRJ33A34U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DeliveryApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
