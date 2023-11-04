@@ -147,7 +147,6 @@
 		0470F1792AF2CAD500354943 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				0470F1642AF2CA5700354943 /* Main.storyboard */,
 				B0EB79702AF41E1500D8625A /* Cart.storyboard */,
 				0470F1692AF2CA5800354943 /* LaunchScreen.storyboard */,
 				0470F1642AF2CA5700354943 /* Main.storyboard */,
