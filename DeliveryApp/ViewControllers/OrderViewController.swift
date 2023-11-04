@@ -11,9 +11,11 @@ final class OrderViewController: UIViewController {
     
     @IBOutlet weak var orderButton: UIButton!
     
+    var orderProductList: [String: Int]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     override func viewWillLayoutSubviews() {
@@ -28,14 +30,20 @@ final class OrderViewController: UIViewController {
 
 extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        orderProductList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCell", for: indexPath) as! OrderTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCell", for: indexPath) as? OrderTableViewCell
         
+        let product = ""
         
-        return cell
+        cell?.quantity.text = product
+        cell?.name.text = product
+        cell?.composition.text = product
+        cell?.price.text = product
+        
+        return cell!
     }
     
     

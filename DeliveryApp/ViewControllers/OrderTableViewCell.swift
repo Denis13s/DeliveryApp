@@ -7,8 +7,12 @@
 
 import UIKit
 
-class OrderTableViewCell: UITableViewCell {
-
+final class OrderTableViewCell: UITableViewCell {
+    @IBOutlet weak var quantity: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var composition: UILabel!
+    @IBOutlet weak var price: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
