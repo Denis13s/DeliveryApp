@@ -12,6 +12,8 @@ final class CartManager {
     static let shared = CartManager()
     
     private(set) var cart: [String: Int] = [:]
+
+//    private(set) var cart = [CartItem]()
     
     private init() {}
     
@@ -26,3 +28,8 @@ final class CartManager {
     }
     
 }
+
+//struct CartItem {
+//    let title: String
+//    let amount: Int
+//}

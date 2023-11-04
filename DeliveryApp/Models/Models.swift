@@ -30,7 +30,9 @@ struct MenuItem {
 // MARK: Getting data
 extension Category {
     static func getData() -> [Category] {
+        
         let restaurants = Restaurant.getData()
+        
         var burgersRestaurants = [Restaurant]()
         var pizzaRestaurants = [Restaurant]()
         var sushiRestaurants = [Restaurant]()

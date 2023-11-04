@@ -20,6 +20,7 @@
 		047F98332AF5844400D2444B /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F98322AF5844400D2444B /* CartManager.swift */; };
 		047F98352AF587D400D2444B /* RestaurantsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F98342AF587D400D2444B /* RestaurantsListViewController.swift */; };
 		047F98392AF58BCA00D2444B /* RestaurantMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F98382AF58BCA00D2444B /* RestaurantMenuViewController.swift */; };
+		04AD33992AF656D000F66B38 /* MenuItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD33982AF656D000F66B38 /* MenuItemViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		047F98322AF5844400D2444B /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		047F98342AF587D400D2444B /* RestaurantsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsListViewController.swift; sourceTree = "<group>"; };
 		047F98382AF58BCA00D2444B /* RestaurantMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMenuViewController.swift; sourceTree = "<group>"; };
+		04AD33982AF656D000F66B38 /* MenuItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				047F98382AF58BCA00D2444B /* RestaurantMenuViewController.swift */,
 				0454FDA12AF59FD300E51133 /* CategoriesListViewController.swift */,
 				0454FDA52AF5A99C00E51133 /* CategoryRestaurantsViewController.swift */,
+				04AD33982AF656D000F66B38 /* MenuItemViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				047F98332AF5844400D2444B /* CartManager.swift in Sources */,
 				0454FDA22AF59FD300E51133 /* CategoriesListViewController.swift in Sources */,
 				0470F1732AF2CA8A00354943 /* MainTabBarController.swift in Sources */,
+				04AD33992AF656D000F66B38 /* MenuItemViewCell.swift in Sources */,
 				0470F1612AF2CA5700354943 /* SceneDelegate.swift in Sources */,
 				0470F17C2AF2CB8E00354943 /* DataService.swift in Sources */,
 				0470F17E2AF2CBA500354943 /* Models.swift in Sources */,

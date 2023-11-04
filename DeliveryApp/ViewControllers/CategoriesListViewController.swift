@@ -18,9 +18,9 @@ class CategoriesListViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let categoryRestaurantsVC = segue.destination as? CategoryRestaurantsViewController {
+        if let restaurantsListVC = segue.destination as? RestaurantsListViewController {
             if let restaurants = sender as? [Restaurant] {
-                categoryRestaurantsVC.restaurants = restaurants
+                restaurantsListVC.restaurants = restaurants
             }
         }
     }
