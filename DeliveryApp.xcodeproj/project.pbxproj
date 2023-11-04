@@ -21,7 +21,8 @@
 		047F98352AF587D400D2444B /* RestaurantsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F98342AF587D400D2444B /* RestaurantsListViewController.swift */; };
 		047F98392AF58BCA00D2444B /* RestaurantMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F98382AF58BCA00D2444B /* RestaurantMenuViewController.swift */; };
 		04AD33992AF656D000F66B38 /* MenuItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD33982AF656D000F66B38 /* MenuItemViewCell.swift */; };
-		04AD339B2AF6636200F66B38 /* Development.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AD339A2AF6636100F66B38 /* Development.storyboard */; };
+		04AD33C12AF66FB800F66B38 /* CartItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD33C02AF66FB800F66B38 /* CartItemViewCell.swift */; };
+		04AD33C32AF676F200F66B38 /* CartListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD33C22AF676F200F66B38 /* CartListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +42,8 @@
 		047F98342AF587D400D2444B /* RestaurantsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsListViewController.swift; sourceTree = "<group>"; };
 		047F98382AF58BCA00D2444B /* RestaurantMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMenuViewController.swift; sourceTree = "<group>"; };
 		04AD33982AF656D000F66B38 /* MenuItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemViewCell.swift; sourceTree = "<group>"; };
-		04AD339A2AF6636100F66B38 /* Development.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Development.storyboard; sourceTree = "<group>"; };
+		04AD33C02AF66FB800F66B38 /* CartItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemViewCell.swift; sourceTree = "<group>"; };
+		04AD33C22AF676F200F66B38 /* CartListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,8 @@
 				0454FDA12AF59FD300E51133 /* CategoriesListViewController.swift */,
 				0454FDA52AF5A99C00E51133 /* CategoryRestaurantsViewController.swift */,
 				04AD33982AF656D000F66B38 /* MenuItemViewCell.swift */,
+				04AD33C22AF676F200F66B38 /* CartListViewController.swift */,
+				04AD33C02AF66FB800F66B38 /* CartItemViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -135,7 +139,6 @@
 			children = (
 				0470F1692AF2CA5800354943 /* LaunchScreen.storyboard */,
 				0470F1642AF2CA5700354943 /* Main.storyboard */,
-				04AD339A2AF6636100F66B38 /* Development.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -216,7 +219,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04AD339B2AF6636200F66B38 /* Development.storyboard in Resources */,
 				0470F16B2AF2CA5800354943 /* LaunchScreen.storyboard in Resources */,
 				0470F1682AF2CA5800354943 /* Assets.xcassets in Resources */,
 				0470F1662AF2CA5700354943 /* Main.storyboard in Resources */,
@@ -232,9 +234,11 @@
 			files = (
 				047F98352AF587D400D2444B /* RestaurantsListViewController.swift in Sources */,
 				0454FDA62AF5A99C00E51133 /* CategoryRestaurantsViewController.swift in Sources */,
+				04AD33C32AF676F200F66B38 /* CartListViewController.swift in Sources */,
 				0470F15F2AF2CA5700354943 /* AppDelegate.swift in Sources */,
 				047F98392AF58BCA00D2444B /* RestaurantMenuViewController.swift in Sources */,
 				047F98332AF5844400D2444B /* CartManager.swift in Sources */,
+				04AD33C12AF66FB800F66B38 /* CartItemViewCell.swift in Sources */,
 				0454FDA22AF59FD300E51133 /* CategoriesListViewController.swift in Sources */,
 				0470F1732AF2CA8A00354943 /* MainTabBarController.swift in Sources */,
 				04AD33992AF656D000F66B38 /* MenuItemViewCell.swift in Sources */,

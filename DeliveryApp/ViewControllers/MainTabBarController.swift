@@ -10,7 +10,7 @@ import UIKit
 final class MainTabBarController: UITabBarController {
     
     let dataService = DataService.shared
-//    let cart = CartManager.shared
+    let cartManager = CartManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +24,9 @@ final class MainTabBarController: UITabBarController {
                     categoriesVC.categories = dataService.categories
                 } else if let restaurantsVC = navigationVC.viewControllers.first as? RestaurantsListViewController {
                     restaurantsVC.restaurants = dataService.restaurants
+                } 
+                else if let cartListVC = navigationVC.viewControllers.first as? CartListViewController {
+                    cartListVC.cartManager = cartManager
                 }
             }
         }

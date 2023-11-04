@@ -8,7 +8,9 @@
 import UIKit
 
 final class RestaurantMenuViewController: UIViewController {
-
+    
+    let cartManager = CartManager.shared
+    
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var imageRestaurant: UIImageView!
     
@@ -18,9 +20,6 @@ final class RestaurantMenuViewController: UIViewController {
         super.viewDidLoad()
         setUI()
     }
-    
-
-
 }
 
 private extension RestaurantMenuViewController {
@@ -58,6 +57,9 @@ extension RestaurantMenuViewController: UITableViewDataSource, UITableViewDelega
         cell.labelTitle.text = menuItem.title
         cell.labelDescription.text = menuItem.description
         cell.labelPrice.text = menuItem.price
+        cell.actionAdd = { [weak self] in
+            self?.cartManager.addItem(menuItem)
+        }
         return cell
     }
     
