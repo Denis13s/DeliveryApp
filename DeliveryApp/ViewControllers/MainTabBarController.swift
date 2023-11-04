@@ -8,22 +8,27 @@
 import UIKit
 
 final class MainTabBarController: UITabBarController {
+    
+    let dataService = DataService.shared
+//    let cart = CartManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        shareData()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func shareData() {
+        viewControllers?.forEach{ vc in
+            if let navigationVC = vc as? UINavigationController {
+                if let categoriesVC = navigationVC.viewControllers.first as? CategoriesListViewController {
+                    categoriesVC.categories = dataService.categories
+                } else if let restaurantsVC = navigationVC.viewControllers.first as? RestaurantsListViewController {
+                    restaurantsVC.restaurants = dataService.restaurants
+                }
+            }
+        }
+        
     }
-    */
+    
 
 }
