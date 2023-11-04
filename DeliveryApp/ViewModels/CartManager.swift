@@ -50,7 +50,6 @@ extension CartManager {
             } else {
                 cartItem.cost = ((item.price * Double(cartItem.amount)) * 100).rounded() / 100
             }
-            
             tabBarDelegate?.updatedCart(with: cart)
         }
     }

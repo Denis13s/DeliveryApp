@@ -279,7 +279,6 @@
                                                                     </state>
                                                                     <connections>
                                                                         <action selector="buttonMinusPressed" destination="lrG-Xp-UKX" eventType="touchUpInside" id="d4F-G7-n9T"/>
-                                                                        <action selector="buttonPlusPressed" destination="lrG-Xp-UKX" eventType="touchUpInside" id="PJm-0H-JNP"/>
                                                                     </connections>
                                                                 </button>
                                                             </subviews>

@@ -43,12 +43,13 @@ extension MainTabBarController: CartManagerDelegate {
                 amount += cartItem.amount
             }
                 
-        if
-            let tabBarItems = tabBar.items,
-           tabBarItems.indices.contains(2)
-        {
+        if let tabBarItems = tabBar.items, tabBarItems.indices.contains(2) {
             let tabBarItem = tabBarItems[2]
-            tabBarItem.badgeValue = "\(amount)"
-                    }
+            if amount != 0 {
+                tabBarItem.badgeValue = "\(amount)"
+            } else {
+                tabBarItem.badgeValue = nil
+            }
+        }
     }
 }
