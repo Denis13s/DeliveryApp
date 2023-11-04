@@ -47,12 +47,16 @@ extension RestaurantMenuViewController: UITableViewDataSource {
         cell.imageItem.image = UIImage(named: menuItem.image)
         cell.imageItem.contentMode = .scaleAspectFill
         cell.imageItem.layer.cornerRadius = 15
-        cell.labelTitle.text = menuItem.title
-        cell.labelDescription.text = menuItem.description
-        cell.labelPrice.text = "$\(menuItem.price)"
-        cell.actionAdd = { [weak self] in
-            self?.cartManager.addItem(menuItem)
-        }
+//        cell.labelTitle.text = menuItem.title
+//        cell.labelDescription.text = menuItem.description
+//        cell.labelPrice.text = "$\(menuItem.price)"
+//        cell.buttonAdd.isHidden = true
+//        cell.buttonAdd.layer.cornerRadius = 10
+//        cell.actionAdd = { [weak self] in
+//            self?.cartManager.addItem(menuItem)
+//        }
+        
+//        cell.selectionStyle = .none
         return cell
     }
     
@@ -60,6 +64,12 @@ extension RestaurantMenuViewController: UITableViewDataSource {
 
 // MARK: UITableViewDelegate
 extension RestaurantMenuViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let menuItem = restaurant.menuItems[indexPath.row]
+        cartManager.addItem(menuItem)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100

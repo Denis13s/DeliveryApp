@@ -15,9 +15,11 @@ final class CartItemViewCell: UITableViewCell {
     @IBOutlet weak var labelAmount: UILabel!
     @IBOutlet weak var imageItem: UIImageView!
     @IBOutlet weak var labelTitle: UILabel!
-    @IBOutlet weak var lableDescription: UILabel!
+    @IBOutlet weak var labelDescription: UILabel!
     @IBOutlet weak var labelCost: UILabel!
 
+    @IBOutlet weak var buttonMinus: UIButton!
+    @IBOutlet weak var buttonPlus: UIButton!
     @IBAction func buttonMinusPressed() {
         actionRemove?()
     }

@@ -7,11 +7,17 @@
 
 import Foundation
 
+protocol CartManagerDelegate {
+    func updatedCart(with cart: [CartItem])
+}
+
 final class CartManager {
     
     static let shared = CartManager()
     
     private(set) var cart = [CartItem]()
+    
+    var tabBarDelegate: CartManagerDelegate?
     
     private init() {}
 }
@@ -31,6 +37,8 @@ extension CartManager {
                 )
             )
         }
+        
+        tabBarDelegate?.updatedCart(with: cart)
     }
     
     func removeItem(_ item: MenuItem) {
@@ -42,6 +50,8 @@ extension CartManager {
             } else {
                 cartItem.cost = ((item.price * Double(cartItem.amount)) * 100).rounded() / 100
             }
+            
+            tabBarDelegate?.updatedCart(with: cart)
         }
     }
     

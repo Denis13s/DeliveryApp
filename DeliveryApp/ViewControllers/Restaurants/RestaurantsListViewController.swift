@@ -11,6 +11,11 @@ final class RestaurantsListViewController: UITableViewController {
     
     var restaurants: [Restaurant]!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.separatorStyle = .none
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let restaurantMenuVC = segue.destination as? RestaurantMenuViewController {
             if let restaurant = sender as? Restaurant {
@@ -25,16 +30,26 @@ final class RestaurantsListViewController: UITableViewController {
 extension RestaurantsListViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurants.count
+        restaurants.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellRestaurant", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellRestaurant", for: indexPath) as! RestaurantViewCell
         
-        var content = cell.defaultContentConfiguration()
-        content.text = restaurants[indexPath.row].title
-        cell.contentConfiguration = content
+        let restaurant = restaurants[indexPath.row]
         
+        cell.imageRestaurant.image = UIImage(named: restaurant.image)
+        cell.imageRestaurant.contentMode = .scaleAspectFill
+        cell.imageRestaurant.layer.cornerRadius = 15
+        cell.labelTitle.text = restaurant.title
+        cell.labelCategory.text = restaurant.categoryTitle
+        
+        // TODO: Make dynamic
+        cell.imageDelivery.image = UIImage(systemName: "bicycle")
+        cell.labelDeliveryPrice.text = "$2.99"
+        cell.labelDeliveryTime.text = "45-60 min"
+        
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -45,6 +60,10 @@ extension RestaurantsListViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showRestaurantMenu", sender: restaurants[indexPath.row])
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        230
     }
     
 }

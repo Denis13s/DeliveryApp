@@ -99,7 +99,7 @@ extension Restaurant {
                 ]
             ),
             Restaurant(
-                title: "Domino's",
+                title: "Dominoe's",
                 image: "dominoes",
                 categoryTitle: "Pizza",
                 menuItems: [

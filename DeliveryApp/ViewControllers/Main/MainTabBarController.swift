@@ -14,13 +14,14 @@ final class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        cartManager.tabBarDelegate = self
         shareData()
     }
     
     private func shareData() {
         viewControllers?.forEach{ vc in
             if let navigationVC = vc as? UINavigationController {
-                if let categoriesVC = navigationVC.viewControllers.first as? CategoriesListViewController {
+                if let categoriesVC = navigationVC.viewControllers.first as? CategoriesViewController {
                     categoriesVC.categories = dataService.categories
                 } else if let restaurantsVC = navigationVC.viewControllers.first as? RestaurantsListViewController {
                     restaurantsVC.restaurants = dataService.restaurants
@@ -33,5 +34,21 @@ final class MainTabBarController: UITabBarController {
         
     }
     
+}
 
+extension MainTabBarController: CartManagerDelegate {
+    func updatedCart(with cart: [CartItem]) {
+            var amount = 0
+            cart.forEach { cartItem in
+                amount += cartItem.amount
+            }
+                
+        if
+            let tabBarItems = tabBar.items,
+           tabBarItems.indices.contains(2)
+        {
+            let tabBarItem = tabBarItems[2]
+            tabBarItem.badgeValue = "\(amount)"
+                    }
+    }
 }

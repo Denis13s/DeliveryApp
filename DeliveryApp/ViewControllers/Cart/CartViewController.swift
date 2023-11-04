@@ -35,7 +35,7 @@ private extension CartViewController {
     
     func setButton() {
         let amountAndCost = getAmountAndCost()
-        buttonOrder.setTitle("Order \(amountAndCost.amount) for $\(amountAndCost.cost)", for: .normal)
+        buttonOrder.setTitle("Order \(amountAndCost.amount) for $\(String(format: "%.2f", amountAndCost.cost))", for: .normal)
         
         if cartManager.cart.isEmpty {
             buttonOrder.isHidden = true
@@ -76,8 +76,11 @@ extension CartViewController: UITableViewDataSource {
         cell.imageItem.contentMode = .scaleAspectFill
         cell.imageItem.layer.cornerRadius = 5
         cell.labelTitle.text = menuItem.title
-        cell.lableDescription.text = menuItem.description
-        cell.labelCost.text = "$\(cartItem.cost)"
+        cell.labelDescription.text = menuItem.description
+        cell.labelCost.text = "$\(String(format: "%.2f", cartItem.cost))"
+        for button in [cell.buttonMinus, cell.buttonPlus] {
+            button?.layer.cornerRadius = 10
+        }
         
         cell.actionAdd = { [weak self] in
             self?.cartManager.addItem(menuItem)
@@ -89,6 +92,8 @@ extension CartViewController: UITableViewDataSource {
             self?.tableView.reloadData()
             self?.setButton()
         }
+        
+        cell.selectionStyle = .none
         return cell
     }
     
