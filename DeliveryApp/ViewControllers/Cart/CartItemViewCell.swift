@@ -7,29 +7,23 @@
 
 import UIKit
 
-class CartItemViewCell: UITableViewCell {
+final class CartItemViewCell: UITableViewCell {
+    
+    var actionAdd: (() -> Void)?
+    var actionRemove: (() -> Void)?
 
     @IBOutlet weak var labelAmount: UILabel!
     @IBOutlet weak var imageItem: UIImageView!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var lableDescription: UILabel!
-    @IBOutlet weak var labelPrice: UILabel!
-    
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    @IBOutlet weak var labelCost: UILabel!
 
     @IBAction func buttonMinusPressed() {
+        actionRemove?()
     }
+    
     @IBAction func buttonPlusPressed() {
+        actionAdd?()
     }
     
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
 }

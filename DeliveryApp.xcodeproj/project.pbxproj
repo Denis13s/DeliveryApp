@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0454FDA22AF59FD300E51133 /* CategoriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0454FDA12AF59FD300E51133 /* CategoriesListViewController.swift */; };
-		0454FDA62AF5A99C00E51133 /* CategoryRestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0454FDA52AF5A99C00E51133 /* CategoryRestaurantsViewController.swift */; };
 		0470F15F2AF2CA5700354943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470F15E2AF2CA5700354943 /* AppDelegate.swift */; };
 		0470F1612AF2CA5700354943 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470F1602AF2CA5700354943 /* SceneDelegate.swift */; };
 		0470F1662AF2CA5700354943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0470F1642AF2CA5700354943 /* Main.storyboard */; };
@@ -22,12 +21,11 @@
 		047F98392AF58BCA00D2444B /* RestaurantMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F98382AF58BCA00D2444B /* RestaurantMenuViewController.swift */; };
 		04AD33992AF656D000F66B38 /* MenuItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD33982AF656D000F66B38 /* MenuItemViewCell.swift */; };
 		04AD33C12AF66FB800F66B38 /* CartItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD33C02AF66FB800F66B38 /* CartItemViewCell.swift */; };
-		04AD33C32AF676F200F66B38 /* CartListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD33C22AF676F200F66B38 /* CartListViewController.swift */; };
+		04AD33C52AF6945D00F66B38 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD33C42AF6945D00F66B38 /* CartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0454FDA12AF59FD300E51133 /* CategoriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListViewController.swift; sourceTree = "<group>"; };
-		0454FDA52AF5A99C00E51133 /* CategoryRestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRestaurantsViewController.swift; sourceTree = "<group>"; };
 		0470F15B2AF2CA5700354943 /* DeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0470F15E2AF2CA5700354943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0470F1602AF2CA5700354943 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +41,7 @@
 		047F98382AF58BCA00D2444B /* RestaurantMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMenuViewController.swift; sourceTree = "<group>"; };
 		04AD33982AF656D000F66B38 /* MenuItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemViewCell.swift; sourceTree = "<group>"; };
 		04AD33C02AF66FB800F66B38 /* CartItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemViewCell.swift; sourceTree = "<group>"; };
-		04AD33C22AF676F200F66B38 /* CartListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListViewController.swift; sourceTree = "<group>"; };
+		04AD33C42AF6945D00F66B38 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,14 +97,10 @@
 		0470F1752AF2CAD500354943 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0470F1722AF2CA8A00354943 /* MainTabBarController.swift */,
-				047F98342AF587D400D2444B /* RestaurantsListViewController.swift */,
-				047F98382AF58BCA00D2444B /* RestaurantMenuViewController.swift */,
-				0454FDA12AF59FD300E51133 /* CategoriesListViewController.swift */,
-				0454FDA52AF5A99C00E51133 /* CategoryRestaurantsViewController.swift */,
-				04AD33982AF656D000F66B38 /* MenuItemViewCell.swift */,
-				04AD33C22AF676F200F66B38 /* CartListViewController.swift */,
-				04AD33C02AF66FB800F66B38 /* CartItemViewCell.swift */,
+				04AD33C62AF69DC200F66B38 /* Main */,
+				04AD33C72AF69DD200F66B38 /* Categories */,
+				04AD33C82AF6A00900F66B38 /* Restaurants */,
+				04AD33C92AF6A1F700F66B38 /* Cart */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -159,6 +153,41 @@
 				047F98322AF5844400D2444B /* CartManager.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		04AD33C62AF69DC200F66B38 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0470F1722AF2CA8A00354943 /* MainTabBarController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		04AD33C72AF69DD200F66B38 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				0454FDA12AF59FD300E51133 /* CategoriesListViewController.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		04AD33C82AF6A00900F66B38 /* Restaurants */ = {
+			isa = PBXGroup;
+			children = (
+				047F98342AF587D400D2444B /* RestaurantsListViewController.swift */,
+				047F98382AF58BCA00D2444B /* RestaurantMenuViewController.swift */,
+				04AD33982AF656D000F66B38 /* MenuItemViewCell.swift */,
+			);
+			path = Restaurants;
+			sourceTree = "<group>";
+		};
+		04AD33C92AF6A1F700F66B38 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				04AD33C42AF6945D00F66B38 /* CartViewController.swift */,
+				04AD33C02AF66FB800F66B38 /* CartItemViewCell.swift */,
+			);
+			path = Cart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,8 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				047F98352AF587D400D2444B /* RestaurantsListViewController.swift in Sources */,
-				0454FDA62AF5A99C00E51133 /* CategoryRestaurantsViewController.swift in Sources */,
-				04AD33C32AF676F200F66B38 /* CartListViewController.swift in Sources */,
+				04AD33C52AF6945D00F66B38 /* CartViewController.swift in Sources */,
 				0470F15F2AF2CA5700354943 /* AppDelegate.swift in Sources */,
 				047F98392AF58BCA00D2444B /* RestaurantMenuViewController.swift in Sources */,
 				047F98332AF5844400D2444B /* CartManager.swift in Sources */,

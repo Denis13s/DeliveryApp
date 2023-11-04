@@ -9,12 +9,11 @@ import UIKit
 
 final class RestaurantMenuViewController: UIViewController {
     
-    let cartManager = CartManager.shared
-    
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var imageRestaurant: UIImageView!
     
     var restaurant: Restaurant!
+    let cartManager = CartManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,10 +33,8 @@ private extension RestaurantMenuViewController {
     
 }
 
-extension RestaurantMenuViewController: UITableViewDataSource, UITableViewDelegate {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        1
-    }
+// MARK: UITableViewDataSource
+extension RestaurantMenuViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         restaurant.menuItems.count
@@ -45,10 +42,6 @@ extension RestaurantMenuViewController: UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellMenuItem", for: indexPath) as! MenuItemViewCell
-//        var content = cell.defaultContentConfiguration()
-//        content.text = restaurant.menuItems[indexPath.row].title
-//        content.secondaryText = restaurant.menuItems[indexPath.row].description
-//        cell.contentConfiguration = content
         let menuItem = restaurant.menuItems[indexPath.row]
         
         cell.imageItem.image = UIImage(named: menuItem.image)
@@ -56,17 +49,20 @@ extension RestaurantMenuViewController: UITableViewDataSource, UITableViewDelega
         cell.imageItem.layer.cornerRadius = 15
         cell.labelTitle.text = menuItem.title
         cell.labelDescription.text = menuItem.description
-        cell.labelPrice.text = menuItem.price
+        cell.labelPrice.text = "$\(menuItem.price)"
         cell.actionAdd = { [weak self] in
             self?.cartManager.addItem(menuItem)
         }
         return cell
     }
     
-    
+}
+
+// MARK: UITableViewDelegate
+extension RestaurantMenuViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
     }
-
+    
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MenuItemViewCell: UITableViewCell {
+final class MenuItemViewCell: UITableViewCell {
     
     var actionAdd: (() -> Void)?
 
@@ -17,15 +17,8 @@ class MenuItemViewCell: UITableViewCell {
     @IBOutlet weak var labelPrice: UILabel!
     @IBOutlet weak var buttonAdd: UIButton!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
     @IBAction func buttonPlusPressed() {
         actionAdd?()
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
 }

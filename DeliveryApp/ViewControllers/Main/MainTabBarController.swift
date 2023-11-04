@@ -25,8 +25,8 @@ final class MainTabBarController: UITabBarController {
                 } else if let restaurantsVC = navigationVC.viewControllers.first as? RestaurantsListViewController {
                     restaurantsVC.restaurants = dataService.restaurants
                 } 
-                else if let cartListVC = navigationVC.viewControllers.first as? CartListViewController {
-                    cartListVC.cartManager = cartManager
+                else if let cartVC = navigationVC.viewControllers.first as? CartViewController {
+                    cartVC.cartManager = cartManager
                 }
             }
         }
