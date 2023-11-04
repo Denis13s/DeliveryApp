@@ -21,6 +21,7 @@
 		047F98352AF587D400D2444B /* RestaurantsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F98342AF587D400D2444B /* RestaurantsListViewController.swift */; };
 		047F98392AF58BCA00D2444B /* RestaurantMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F98382AF58BCA00D2444B /* RestaurantMenuViewController.swift */; };
 		04AD33992AF656D000F66B38 /* MenuItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD33982AF656D000F66B38 /* MenuItemViewCell.swift */; };
+		04AD339B2AF6636200F66B38 /* Development.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AD339A2AF6636100F66B38 /* Development.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		047F98342AF587D400D2444B /* RestaurantsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsListViewController.swift; sourceTree = "<group>"; };
 		047F98382AF58BCA00D2444B /* RestaurantMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMenuViewController.swift; sourceTree = "<group>"; };
 		04AD33982AF656D000F66B38 /* MenuItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemViewCell.swift; sourceTree = "<group>"; };
+		04AD339A2AF6636100F66B38 /* Development.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Development.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +133,9 @@
 		0470F1792AF2CAD500354943 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				0470F1642AF2CA5700354943 /* Main.storyboard */,
 				0470F1692AF2CA5800354943 /* LaunchScreen.storyboard */,
+				0470F1642AF2CA5700354943 /* Main.storyboard */,
+				04AD339A2AF6636100F66B38 /* Development.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04AD339B2AF6636200F66B38 /* Development.storyboard in Resources */,
 				0470F16B2AF2CA5800354943 /* LaunchScreen.storyboard in Resources */,
 				0470F1682AF2CA5800354943 /* Assets.xcassets in Resources */,
 				0470F1662AF2CA5700354943 /* Main.storyboard in Resources */,
