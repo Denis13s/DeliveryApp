@@ -18,6 +18,9 @@ struct Restaurant {
     let image: String
     let categoryTitle: String
     let menuItems: [MenuItem]
+    
+    let deliveryTime: String
+    let deliveryFee: Double
 }
 
 struct MenuItem {
@@ -25,6 +28,7 @@ struct MenuItem {
     let image: String
     let description: String
     let price: Double
+    let restaurantTitle: String
 }
 
 // MARK: Getting data
@@ -76,6 +80,22 @@ extension Category {
 }
 
 extension Restaurant {
+    static func getDeliveryTime() -> String {
+        switch Int.random(in: 0...2) {
+        case 0: return "30-45 min"
+        case 1: return "45-60 min"
+        default: return "60-90 min"
+        }
+    }
+    
+    static func getDeliveryFee() -> Double {
+        switch Int.random(in: 0...2) {
+        case 0: return 0.99
+        case 1: return 1.99
+        default: return 2.99
+        }
+    }
+    
     static func getData() -> [Restaurant] {
         [
             Restaurant(
@@ -83,59 +103,71 @@ extension Restaurant {
                 image: "bk",
                 categoryTitle: "Burgers",
                 menuItems: [
-                    MenuItem(title: "Classic Burger", image: "bk-1", description: "Delicious burger with fresh ingredients.", price: 3.99),
-                    MenuItem(title: "Cheeseburger Deluxe", image: "bk-2", description: "Served with a side of crispy fries.", price: 4.49),
-                    MenuItem(title: "BBQ Bacon Burger", image: "bk-3", description: "Topped with special BBQ sauce.", price: 4.99)
-                ]
+                    MenuItem(title: "Classic Burger", image: "bk-1", description: "Delicious burger with fresh ingredients.", price: 3.99, restaurantTitle: "Burger King"),
+                    MenuItem(title: "Cheeseburger Deluxe", image: "bk-2", description: "Served with a side of crispy fries.", price: 4.49, restaurantTitle: "Burger King"),
+                    MenuItem(title: "BBQ Bacon Burger", image: "bk-3", description: "Topped with special BBQ sauce.", price: 4.99, restaurantTitle: "Burger King")
+                ],
+                deliveryTime: Restaurant.getDeliveryTime(),
+                deliveryFee: Restaurant.getDeliveryFee()
             ),
             Restaurant(
                 title: "McDonald's",
                 image: "md",
                 categoryTitle: "Burgers",
                 menuItems: [
-                    MenuItem(title: "Spicy Chicken Sandwich", image: "md-1", description: "Made with spicy seasoning.", price: 5.29),
-                    MenuItem(title: "Vegetarian Burger", image: "md-2", description: "A perfect choice for vegetarians.", price: 3.79),
-                    MenuItem(title: "Burger Supreme", image: "md-3", description: "Loaded with gourmet toppings.", price: 5.99)
-                ]
+                    MenuItem(title: "Spicy Chicken Sandwich", image: "md-1", description: "Made with spicy seasoning.", price: 5.29, restaurantTitle: "McDonald's"),
+                    MenuItem(title: "Vegetarian Burger", image: "md-2", description: "A perfect choice for vegetarians.", price: 3.79, restaurantTitle: "McDonald's"),
+                    MenuItem(title: "Burger Supreme", image: "md-3", description: "Loaded with gourmet toppings.", price: 5.99, restaurantTitle: "McDonald's")
+                ],
+                deliveryTime: Restaurant.getDeliveryTime(),
+                deliveryFee: Restaurant.getDeliveryFee()
             ),
             Restaurant(
                 title: "Dominoe's",
                 image: "dominoes",
                 categoryTitle: "Pizza",
                 menuItems: [
-                    MenuItem(title: "Margherita Pizza", image: "dominoes-1", description: "Classic pizza with tomato and cheese.", price: 6.99),
-                    MenuItem(title: "Pepperoni Pizza", image: "dominoes-2", description: "Topped with savory pepperoni slices.", price: 7.49),
-                    MenuItem(title: "Vegetarian Pizza", image: "dominoes-3", description: "Abundance of fresh vegetables.", price: 6.79)
-                ]
+                    MenuItem(title: "Margherita Pizza", image: "dominoes-1", description: "Classic pizza with tomato and cheese.", price: 6.99, restaurantTitle: "Dominoe's"),
+                    MenuItem(title: "Pepperoni Pizza", image: "dominoes-2", description: "Topped with savory pepperoni slices.", price: 7.49, restaurantTitle: "Dominoe's"),
+                    MenuItem(title: "Vegetarian Pizza", image: "dominoes-3", description: "Abundance of fresh vegetables.", price: 6.79, restaurantTitle: "Dominoe's")
+                ],
+                deliveryTime: Restaurant.getDeliveryTime(),
+                deliveryFee: Restaurant.getDeliveryFee()
             ),
             Restaurant(
                 title: "Pizza Hut",
                 image: "ph",
                 categoryTitle: "Pizza",
                 menuItems: [
-                    MenuItem(title: "Hawaiian Pizza", image: "ph-1", description: "Sweet and savory combination.", price: 8.99),
-                    MenuItem(title: "Meat Lover's Pizza", image: "ph-2", description: "Packed with various meat toppings.", price: 9.49),
-                    MenuItem(title: "Supreme Pizza", image: "ph-3", description: "Loaded with diverse gourmet ingredients.", price: 8.79)
-                ]
+                    MenuItem(title: "Hawaiian Pizza", image: "ph-1", description: "Sweet and savory combination.", price: 8.99, restaurantTitle: "Pizza Hut"),
+                    MenuItem(title: "Meat Lover's Pizza", image: "ph-2", description: "Packed with various meat toppings.", price: 9.49, restaurantTitle: "Pizza Hut"),
+                    MenuItem(title: "Supreme Pizza", image: "ph-3", description: "Loaded with diverse gourmet ingredients.", price: 8.79, restaurantTitle: "Pizza Hut")
+                ],
+                deliveryTime: Restaurant.getDeliveryTime(),
+                deliveryFee: Restaurant.getDeliveryFee()
             ),
             Restaurant(
                 title: "Nobu",
                 image: "nobu",
                 categoryTitle: "Sushi",
                 menuItems: [
-                    MenuItem(title: "Sushi Combo A", image: "nobu-1", description: "Assortment of fresh sushi pieces.", price: 12.99),
-                    MenuItem(title: "Sashimi Platter", image: "nobu-2", description: "Thinly sliced raw fish.", price: 14.99),
-                    MenuItem(title: "Dragon Roll", image: "nobu-3", description: "Sushi roll with eel and avocado.", price: 10.99)
-                ]
+                    MenuItem(title: "Sushi Combo A", image: "nobu-1", description: "Assortment of fresh sushi pieces.", price: 12.99, restaurantTitle: "Nobu"),
+                    MenuItem(title: "Sashimi Platter", image: "nobu-2", description: "Thinly sliced raw fish.", price: 14.99, restaurantTitle: "Nobu"),
+                    MenuItem(title: "Dragon Roll", image: "nobu-3", description: "Sushi roll with eel and avocado.", price: 10.99, restaurantTitle: "Nobu")
+                ],
+                deliveryTime: Restaurant.getDeliveryTime(),
+                deliveryFee: Restaurant.getDeliveryFee()
             ),
             Restaurant(
                 title: "Chipotle",
                 image: "chipotle",
                 categoryTitle: "Mexican",
                 menuItems: [
-                    MenuItem(title: "Burrito Bowl", image: "chipotle-1", description: "Rice, beans, meat, and fresh toppings.", price: 7.99),
-                    MenuItem(title: "Tacos Al Pastor", image: "chipotle-2", description: "Tacos with marinated pork and pineapple.", price: 8.49)
-                ]
+                    MenuItem(title: "Burrito Bowl", image: "chipotle-1", description: "Rice, beans, meat, and fresh toppings.", price: 7.99, restaurantTitle: "Chipotle"),
+                    MenuItem(title: "Tacos Al Pastor", image: "chipotle-2", description: "Tacos with marinated pork and pineapple.", price: 8.49, restaurantTitle: "Chipotle")
+                ],
+                deliveryTime: Restaurant.getDeliveryTime(),
+                deliveryFee: Restaurant.getDeliveryFee()
             )
         ]
     }

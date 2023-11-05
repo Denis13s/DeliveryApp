@@ -200,9 +200,9 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imageItem" destination="wgn-eF-HIG" id="cbe-7H-gy2"/>
-                                            <outlet property="labelDescription" destination="1av-6o-bIf" id="DYF-Xb-XgI"/>
+                                            <outlet property="labelDescription" destination="1av-6o-bIf" id="MB1-ZE-CT1"/>
                                             <outlet property="labelPrice" destination="H1L-u0-Syk" id="3w7-B6-ACc"/>
-                                            <outlet property="labelTitle" destination="fQj-RJ-7OY" id="Mvs-hV-XYJ"/>
+                                            <outlet property="labelTitle" destination="fQj-RJ-7OY" id="UKc-sh-QQ2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

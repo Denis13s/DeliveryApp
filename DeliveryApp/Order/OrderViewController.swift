@@ -23,6 +23,7 @@ final class OrderViewController: UIViewController {
     
     @IBOutlet weak var buttonOrderAndPay: UIButton!
     
+    let dataService = DataService.shared
     var cartManager: CartManager!
     var amount: Int!
     var cost: Double!
@@ -54,11 +55,29 @@ private extension OrderViewController {
         buttonOrderAndPay.layer.cornerRadius = 15
         
         // TODO: Make Dynamic
-        labelDeliveryTime.text = "45-60 min"
+        setDeliveries()
         labelCostProducts.text = "$\(String(format: "%.2f", cost))"
-        labelCostDelivery.text = "$2.99"
         labelCostServices.text = "$0.99"
-        labelCostTotal.text = "$\(String(format: "%.2f", (cost + 2.99 + 0.99)))"
+        
+    }
+    
+    func setDeliveries() {
+        var restaurants = [Restaurant]()
+        
+        cartManager.cart.forEach { cartItem in
+            let restaurant = dataService.restaurants.first(where: { $0.title == cartItem.item.restaurantTitle } )
+            if !restaurants.contains(where: { $0.title == restaurant?.title } ) {
+                if let restaurant {
+                    restaurants.append(restaurant)
+                }
+            }
+        }
+        
+        labelDeliveryTime.text = (restaurants.count > 1) ? "90+ min" : restaurants.first?.deliveryTime ?? ""
+        var deliveryFee = 0.0
+        restaurants.forEach { deliveryFee += $0.deliveryFee }
+        labelCostDelivery.text = "$\(String(format: "%.2f", deliveryFee))"
+        labelCostTotal.text = "$\(String(format: "%.2f", (cost + deliveryFee + 0.99)))"
     }
     
     func showAlert(with message: String) {

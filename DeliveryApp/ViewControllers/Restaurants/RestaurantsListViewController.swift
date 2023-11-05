@@ -46,8 +46,8 @@ extension RestaurantsListViewController {
         
         // TODO: Make dynamic
         cell.imageDelivery.image = UIImage(systemName: "bicycle")
-        cell.labelDeliveryPrice.text = "$2.99"
-        cell.labelDeliveryTime.text = "45-60 min"
+        cell.labelDeliveryPrice.text = "$\(restaurant.deliveryFee)"
+        cell.labelDeliveryTime.text = restaurant.deliveryTime
         
         cell.selectionStyle = .none
         return cell

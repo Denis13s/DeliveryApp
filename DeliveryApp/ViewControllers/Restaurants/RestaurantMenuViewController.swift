@@ -47,9 +47,9 @@ extension RestaurantMenuViewController: UITableViewDataSource {
         cell.imageItem.image = UIImage(named: menuItem.image)
         cell.imageItem.contentMode = .scaleAspectFill
         cell.imageItem.layer.cornerRadius = 15
-//        cell.labelTitle.text = menuItem.title
-//        cell.labelDescription.text = menuItem.description
-//        cell.labelPrice.text = "$\(menuItem.price)"
+        cell.labelTitle.text = menuItem.title
+        cell.labelDescription.text = menuItem.description
+        cell.labelPrice.text = "$\(menuItem.price)"
 //        cell.buttonAdd.isHidden = true
 //        cell.buttonAdd.layer.cornerRadius = 10
 //        cell.actionAdd = { [weak self] in
