@@ -28,6 +28,8 @@ final class MainTabBarController: UITabBarController {
                 } 
                 else if let cartVC = navigationVC.viewControllers.first as? CartViewController {
                     cartVC.cartManager = cartManager
+                } else if let developersVS = navigationVC.viewControllers.first as? DevelopersListViewController {
+                    developersVS.developers = dataService.developers
                 }
             }
         }

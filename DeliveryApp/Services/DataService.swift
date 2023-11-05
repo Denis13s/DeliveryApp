@@ -13,10 +13,12 @@ final class DataService {
     
     let categories: [Category]
     let restaurants: [Restaurant]
+    let developers: [Developer]
     
     private init() {
         categories = Category.getData()
         restaurants = Restaurant.getData()
+        developers = Developer.getData()
     }
     
 }

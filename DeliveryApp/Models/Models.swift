@@ -31,6 +31,11 @@ struct MenuItem {
     let restaurantTitle: String
 }
 
+struct Developer {
+    let fullName: String
+    let image: String
+}
+
 // MARK: Getting data
 extension Category {
     static func getData() -> [Category] {
@@ -169,6 +174,17 @@ extension Restaurant {
                 deliveryTime: Restaurant.getDeliveryTime(),
                 deliveryFee: Restaurant.getDeliveryFee()
             )
+        ]
+    }
+}
+
+extension Developer {
+    static func getData() -> [Developer] {
+        [
+            Developer(fullName: "Denis", image: "denis"),
+            Developer(fullName: "Kirill", image: "kirill"),
+            Developer(fullName: "Nikita", image: "nikita"),
+            Developer(fullName: "Daniil", image: "daniil")
         ]
     }
 }
