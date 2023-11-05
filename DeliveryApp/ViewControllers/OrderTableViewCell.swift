@@ -8,6 +8,7 @@
 import UIKit
 
 final class OrderTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var quantity: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var composition: UILabel!

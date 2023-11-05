@@ -27,6 +27,8 @@
 		B0EB797B2AF437E200D8625A /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB797A2AF437E200D8625A /* OrderViewController.swift */; };
 		B0EB797D2AF52D8F00D8625A /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB797C2AF52D8F00D8625A /* CartTableViewCell.swift */; };
 		B0EB797F2AF56C4E00D8625A /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB797E2AF56C4E00D8625A /* OrderTableViewCell.swift */; };
+		B0EB79812AF68A1500D8625A /* ApplePayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB79802AF68A1500D8625A /* ApplePayViewController.swift */; };
+		B0EB79832AF68B6900D8625A /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB79822AF68B6900D8625A /* DeliveryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		B0EB797A2AF437E200D8625A /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		B0EB797C2AF52D8F00D8625A /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		B0EB797E2AF56C4E00D8625A /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		B0EB79802AF68A1500D8625A /* ApplePayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayViewController.swift; sourceTree = "<group>"; };
+		B0EB79822AF68B6900D8625A /* DeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,8 @@
 				B0EB797C2AF52D8F00D8625A /* CartTableViewCell.swift */,
 				B0EB797A2AF437E200D8625A /* OrderViewController.swift */,
 				B0EB797E2AF56C4E00D8625A /* OrderTableViewCell.swift */,
+				B0EB79802AF68A1500D8625A /* ApplePayViewController.swift */,
+				B0EB79822AF68B6900D8625A /* DeliveryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -248,12 +254,14 @@
 			files = (
 				047F98352AF587D400D2444B /* RestaurantsListViewController.swift in Sources */,
 				0454FDA62AF5A99C00E51133 /* CategoryRestaurantsViewController.swift in Sources */,
+				B0EB79812AF68A1500D8625A /* ApplePayViewController.swift in Sources */,
 				0470F15F2AF2CA5700354943 /* AppDelegate.swift in Sources */,
 				047F98392AF58BCA00D2444B /* RestaurantMenuViewController.swift in Sources */,
 				047F98332AF5844400D2444B /* CartManager.swift in Sources */,
 				0454FDA22AF59FD300E51133 /* CategoriesListViewController.swift in Sources */,
 				0470F1732AF2CA8A00354943 /* MainTabBarController.swift in Sources */,
 				04AD33992AF656D000F66B38 /* MenuItemViewCell.swift in Sources */,
+				B0EB79832AF68B6900D8625A /* DeliveryViewController.swift in Sources */,
 				0470F1612AF2CA5700354943 /* SceneDelegate.swift in Sources */,
 				B0EB797B2AF437E200D8625A /* OrderViewController.swift in Sources */,
 				0470F17C2AF2CB8E00354943 /* DataService.swift in Sources */,
