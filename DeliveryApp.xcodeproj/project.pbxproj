@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042616632AF7ABBD00C952DE /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042616622AF7ABBD00C952DE /* Cart.storyboard */; };
+		042616652AF7B53100C952DE /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042616642AF7B53100C952DE /* OrderViewController.swift */; };
+		042616672AF7B71D00C952DE /* OrderItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042616662AF7B71D00C952DE /* OrderItemViewCell.swift */; };
+		0426166A2AF7C38E00C952DE /* ApplePayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042616692AF7C38E00C952DE /* ApplePayViewController.swift */; };
 		0470F15F2AF2CA5700354943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470F15E2AF2CA5700354943 /* AppDelegate.swift */; };
 		0470F1612AF2CA5700354943 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470F1602AF2CA5700354943 /* SceneDelegate.swift */; };
 		0470F1662AF2CA5700354943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0470F1642AF2CA5700354943 /* Main.storyboard */; };
@@ -27,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042616622AF7ABBD00C952DE /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
+		042616642AF7B53100C952DE /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		042616662AF7B71D00C952DE /* OrderItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemViewCell.swift; sourceTree = "<group>"; };
+		042616692AF7C38E00C952DE /* ApplePayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayViewController.swift; sourceTree = "<group>"; };
 		0470F15B2AF2CA5700354943 /* DeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0470F15E2AF2CA5700354943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0470F1602AF2CA5700354943 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +67,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		042616682AF7C36C00C952DE /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				042616642AF7B53100C952DE /* OrderViewController.swift */,
+				042616662AF7B71D00C952DE /* OrderItemViewCell.swift */,
+				042616692AF7C38E00C952DE /* ApplePayViewController.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
 		0470F1522AF2CA5700354943 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +99,7 @@
 				0470F1782AF2CAD500354943 /* Resources */,
 				0470F17A2AF2CAD500354943 /* App */,
 				0470F1752AF2CAD500354943 /* ViewControllers */,
+				042616682AF7C36C00C952DE /* Order */,
 				0470F1792AF2CAD500354943 /* Storyboards */,
 				047F98312AF5842B00D2444B /* ViewModels */,
 				0470F1742AF2CAD500354943 /* Services */,
@@ -137,6 +156,7 @@
 			children = (
 				0470F1692AF2CA5800354943 /* LaunchScreen.storyboard */,
 				0470F1642AF2CA5700354943 /* Main.storyboard */,
+				042616622AF7ABBD00C952DE /* Cart.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -254,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042616632AF7ABBD00C952DE /* Cart.storyboard in Resources */,
 				0470F16B2AF2CA5800354943 /* LaunchScreen.storyboard in Resources */,
 				0470F1682AF2CA5800354943 /* Assets.xcassets in Resources */,
 				0470F1662AF2CA5700354943 /* Main.storyboard in Resources */,
@@ -272,12 +293,15 @@
 				04AD33D32AF6D26800F66B38 /* MenuItemViewCell.swift in Sources */,
 				0470F15F2AF2CA5700354943 /* AppDelegate.swift in Sources */,
 				04AD33CF2AF6C04200F66B38 /* RestaurantViewCell.swift in Sources */,
+				0426166A2AF7C38E00C952DE /* ApplePayViewController.swift in Sources */,
 				047F98392AF58BCA00D2444B /* RestaurantMenuViewController.swift in Sources */,
 				047F98332AF5844400D2444B /* CartManager.swift in Sources */,
 				04AD33C12AF66FB800F66B38 /* CartItemViewCell.swift in Sources */,
+				042616672AF7B71D00C952DE /* OrderItemViewCell.swift in Sources */,
 				04AD33CD2AF6ACC600F66B38 /* CategoryViewCell.swift in Sources */,
 				0470F1732AF2CA8A00354943 /* MainTabBarController.swift in Sources */,
 				0470F1612AF2CA5700354943 /* SceneDelegate.swift in Sources */,
+				042616652AF7B53100C952DE /* OrderViewController.swift in Sources */,
 				0470F17C2AF2CB8E00354943 /* DataService.swift in Sources */,
 				0470F17E2AF2CBA500354943 /* Models.swift in Sources */,
 				04AD33CB2AF6A5DD00F66B38 /* CategoriesViewController.swift in Sources */,

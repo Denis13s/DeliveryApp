@@ -24,6 +24,20 @@ final class CartViewController: UIViewController {
         tableView.reloadData()
         setButton()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let orderVC = segue.destination as? OrderViewController {
+            orderVC.cartManager = cartManager
+            let amountAndCost = getAmountAndCost()
+            orderVC.amount = amountAndCost.amount
+            orderVC.cost = amountAndCost.cost
+        }
+    }
+    
+    @IBAction func buttonPressed() {
+        performSegue(withIdentifier: "showOrder", sender: nil)
+    }
+    
 }
 
 private extension CartViewController {
