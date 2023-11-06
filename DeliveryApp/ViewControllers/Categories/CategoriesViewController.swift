@@ -14,10 +14,24 @@ class CategoriesViewController: UIViewController {
 
     var categories: [Category]!
     
+    @objc func didEndScrollingLeft() {
+        tableViewLeft.delegate = self
+    }
+    
+    @objc func didEndScrollingRight() {
+        tableViewRight.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableViewLeft.delegate = self
+        self.tableViewRight.delegate = self
+        self.tableViewLeft.reloadData()
+        self.tableViewRight.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         for tableView in [tableViewLeft, tableViewRight] {
-            tableView?.isScrollEnabled = false
             tableView?.separatorStyle = .none
         }
     }
@@ -69,6 +83,19 @@ extension CategoriesViewController: UITableViewDataSource {
         
         cell.selectionStyle = .none
         return cell
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView == tableViewLeft {
+            tableViewRight.delegate = nil
+            tableViewRight.contentOffset = scrollView.contentOffset
+            self.perform(#selector(self.didEndScrollingRight), with: nil, afterDelay: 0.3)
+        }
+        if scrollView == tableViewRight {
+            tableViewLeft.delegate = nil
+            tableViewLeft.contentOffset = scrollView.contentOffset
+            self.perform(#selector(self.didEndScrollingLeft), with: nil, afterDelay: 0.3)
+        }
     }
     
 }

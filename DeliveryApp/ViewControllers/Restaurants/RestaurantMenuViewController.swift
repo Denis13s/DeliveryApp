@@ -10,7 +10,6 @@ import UIKit
 final class RestaurantMenuViewController: UIViewController {
     
     @IBOutlet weak var labelTitle: UILabel!
-    @IBOutlet weak var imageRestaurant: UIImageView!
     
     var restaurant: Restaurant!
     let cartManager = CartManager.shared
@@ -24,10 +23,6 @@ final class RestaurantMenuViewController: UIViewController {
 private extension RestaurantMenuViewController {
     
     func setUI() {
-        imageRestaurant.image = UIImage(named: restaurant.image)
-        imageRestaurant.contentMode = .scaleAspectFill
-        imageRestaurant.layer.cornerRadius = 15
-
         title = restaurant.title
     }
     
@@ -58,6 +53,22 @@ extension RestaurantMenuViewController: UITableViewDataSource {
         
 //        cell.selectionStyle = .none
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+
+        let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 375, height: 170))
+        imageView.image = UIImage(named: restaurant.image)
+
+        headerView.addSubview(imageView)
+
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        185
     }
     
 }

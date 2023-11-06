@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cbd-dc-NzK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cbd-dc-NzK">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -132,14 +132,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YDc-FC-5H8">
-                                <rect key="frame" x="16" y="116" width="343" height="170"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="ZvS-Pl-fWT"/>
-                                </constraints>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="75G-sj-KH8">
-                                <rect key="frame" x="0.0" y="306" width="375" height="312"/>
+                                <rect key="frame" x="0.0" y="49" width="375" height="569"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellMenuItem" rowHeight="100" id="cXk-Ev-lp8" customClass="MenuItemViewCell" customModule="DeliveryApp" customModuleProvider="target">
@@ -215,23 +209,17 @@
                         <viewLayoutGuide key="safeArea" id="Ehs-yO-EAN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="YDc-FC-5H8" firstAttribute="top" secondItem="Ehs-yO-EAN" secondAttribute="top" id="2Hs-2D-Lxn"/>
-                            <constraint firstItem="75G-sj-KH8" firstAttribute="top" secondItem="YDc-FC-5H8" secondAttribute="bottom" constant="20" id="7cK-Hf-5UM"/>
                             <constraint firstItem="75G-sj-KH8" firstAttribute="trailing" secondItem="Ehs-yO-EAN" secondAttribute="trailing" id="Iug-iE-aNa"/>
-                            <constraint firstItem="Ehs-yO-EAN" firstAttribute="trailing" secondItem="YDc-FC-5H8" secondAttribute="trailing" constant="16" id="LVh-qn-rNV"/>
-                            <constraint firstItem="YDc-FC-5H8" firstAttribute="leading" secondItem="Ehs-yO-EAN" secondAttribute="leading" constant="16" id="PKf-jx-WFN"/>
                             <constraint firstItem="75G-sj-KH8" firstAttribute="bottom" secondItem="Ehs-yO-EAN" secondAttribute="bottom" id="QCg-c7-fgc"/>
+                            <constraint firstItem="75G-sj-KH8" firstAttribute="centerY" secondItem="zzE-7P-MDl" secondAttribute="centerY" id="V3Z-gC-vIk"/>
                             <constraint firstItem="75G-sj-KH8" firstAttribute="leading" secondItem="Ehs-yO-EAN" secondAttribute="leading" id="pu5-JT-xlc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Z3d-nA-Beh"/>
-                    <connections>
-                        <outlet property="imageRestaurant" destination="YDc-FC-5H8" id="vnr-XU-hgz"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8z-gg-A1K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1143" y="-346"/>
+            <point key="canvasLocation" x="1141.5999999999999" y="-346.77661169415296"/>
         </scene>
         <!--Discover-->
         <scene sceneID="ffN-tP-hdA">
